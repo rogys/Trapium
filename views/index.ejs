@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-br">
+    <head>
+        <meta name="robots" content="index, follow">
+        <link rel="icon" href="favicon.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <title>Página</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Ygor Scofano">
+        <link rel="stylesheet" href="/stylesheet/style.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="container flex">
+                <h1 class="main_title">Trapium!</h1>
+                <nav>
+                    <ul class="flex">
+                        <li class="list_item"><%= user %></li>
+                        <li class="list_item"><a href="/logout">Sair.</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <div class="left_content">
+                <div class="menssage">
+                    <% data.forEach(e => { %>
+                        <h4 class="title_text"><%= e.email %></h4><span class="date">Date: <%= e.created_at %></span>
+                        <p class="text"><%= e.text %></p>
+                    <% }) %>
+                </div>
+            </div>
+            <aside class="aside">
+                <form class="form full_height" action="/" method="POST">
+                    <h1 class="title_form">Mandar:</h1>
+                    <label class="label_form" for="text">mensagem!</label>
+                    <input type="text" placeholder="escreva aqui..." required name="text" id="text">
+                    <button type="submit">Enviar!</button>
+                </form>
+            </aside>
+        </main>
+    </body>
+    <script src="/script/script.js"></script>
+</html>
