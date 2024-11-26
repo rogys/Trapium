@@ -1,9 +1,9 @@
-Para fazer funcionar ->
-Node instalado, abrir o terminal e rodar:
-npm init
-npm install express express-session mysql2 ejs
-Isso instala as pendencias do projeto. É necessário um banco de dados MySQL:
-Correr esse comando para criar as tabelas necessárias:
+Para fazer funcionar -><br />
+Node instalado, abrir o terminal e rodar:<br />
+<code>npm init<br />
+npm install express express-session mysql2 ejs</code><br />
+Isso instala as pendencias do projeto. É necessário um banco de dados MySQL:<br />
+Correr esse comando para criar as tabelas necessárias:<br />
 <code>CREATE DATABASE local_api;<br />
 USE local_api;<br />
 CREATE TABLE users (<br />
