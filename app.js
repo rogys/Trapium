@@ -64,9 +64,12 @@ app.post('/login', (req, res) => {
         if(error) {
             res.send('Erro na consulta do banco!');
             return;
+        } else if (results.length > 0) {
+            req.session.email = email;
+            res.redirect('/');
+        } else {
+            res.send('Senha ou email incorretos!');
         };
-        req.session.email = email;
-        res.redirect('/');
     });
 });
 app.post('/signup', (req, res) => {
